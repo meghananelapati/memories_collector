@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+    <%- include('../partials/head.ejs') %>
+
+<body>
+    <%- include('../partials/nav.ejs') %>
+
+
+    <div class="create-memory content">
+         <form action="/memories" method="POST"> 
+          <label for="title">Memory title:</label>
+          <input type="text" id="title" name="title" required > 
+          <label for="snippet">Memory date:</label>
+          <input type="text" id="snippet" name="snippet" required>
+          <label for="body">Memory body:</label>
+          <textarea id="body" name="body"  required></textarea>
+          <button>Store</button>
+        </form>
+      </div>
+    <%- include('../partials/footer.ejs') %>
+
+</body>
+</html>

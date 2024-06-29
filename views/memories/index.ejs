@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+    <%- include('../partials/head.ejs') %>
+
+<body>
+    <%- include('../partials/nav.ejs') %>
+    
+ 
+
+    <div class="memories content">
+        <h2>All Memories</h2>
+        <% if (memories.length >0){ %>
+           
+            <% memories.forEach(memory=>{ %>
+                <a class="single" href="/memories/<%= memory._id%>">
+                    <h3 class="title"><%=memory.title%></h3>
+                    <p class ="snippet"><%=memory.snippet%></p>
+                </a>
+            <% }) %>
+        <% } else{ %>  
+            <p>There are no memories to display</p>
+        <% } %>
+    </div>
+    <%- include('../partials/footer.ejs') %>
+
+
+</body>
+</html>
